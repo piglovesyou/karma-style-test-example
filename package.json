@@ -1,0 +1,34 @@
+{
+  "name": "karma-style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-espower": "^2.3.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "html-tags": "^1.1.1",
+    "intelli-espower-loader": "^1.0.1",
+    "karma": "^1.1.0",
+    "karma-browserify": "^5.0.5",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-cli": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-html2js-preprocessor": "^1.0.0",
+    "karma-less-preprocessor": "^0.3.3",
+    "karma-mocha": "^1.1.1",
+    "karma-requirejs": "^1.0.0",
+    "mocha": "^2.5.3",
+    "power-assert": "^1.4.1",
+    "requirejs": "^2.2.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "html-tags": "^1.1.1"
+  }
+}
