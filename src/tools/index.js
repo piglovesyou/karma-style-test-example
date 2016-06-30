@@ -2,8 +2,9 @@ class StyleHelper {
   constructor() {
     this.frames = [];
   }
-  promiseStyleWithHTML(html, selector) {
-    const element = this.createElement(html, selector);
+  promiseStyleWithHTML(html, selector, options) {
+    options = options || {};
+    const element = this.createElement(html, selector, options);
     return this.promiseStyle(element);
   }
   promiseStyle(element) {
@@ -38,9 +39,18 @@ class StyleHelper {
       }
     });
   }
-  createElement(html, selector) {
+  createElement(html, selector, options) {
+    options = options || {};
     const frame = document.createElement('iframe');
     this.frames.push(frame);
+
+    if (typeof options.viewportWidth === 'number') {
+      frame.style.width = options.viewportWidth + 'px';
+    }
+    if (typeof options.viewportHeight === 'number') {
+      frame.style.height = options.viewportHeight + 'px';
+    }
+
     window.document.body.appendChild(frame);
     const doc = frame.contentDocument;
     doc.body.innerHTML = html;
